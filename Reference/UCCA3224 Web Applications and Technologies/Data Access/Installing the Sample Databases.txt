@@ -1,0 +1,27 @@
+* Installing the Sample Databases
+---------------------------------
+These examples use two sample databases: Northwind and Pubs.
+
+To install the sample databases, you can use the following SQL scripts:
+
+- Use InstNwnd.sql to install the Northwind database.
+- Use InstPubs.sql to install the Pubs database.
+
+If you are using a full version of SQL Server, you can open these scripts and run
+them using a graphical tool like SQL Server Management Studio, or you can use
+sqlcmd.exe, which is discussed below.
+
+If you are using SQL Server Express, you need to use the sqlcmd.exe command-line
+tool. For example, you can use a command like this to install the Northwind
+database on SQL Server Express LocalDB:
+
+  sqlcmd -S (localdb)\v11.0 -i InstNwnd.sql
+
+Or on the separately downloadable version of SQL Server Express:
+
+  sqlcmd -S localhost\SQLEXPRESS -i InstNwnd.sql
+
+If you are using a full version of SQL Server on the local computer, you need
+a command like this:
+
+  sqlcmd -i InstNwnd.sql

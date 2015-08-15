@@ -1,0 +1,57 @@
+﻿/* The style for the heading that's displayed
+above the cart */
+#carthead
+{
+    padding-top: 10px;
+    margin-bottom: 7px;
+}
+
+/* The styles for the division that contains
+the buttons to the right of the cart */
+#cartbuttons
+{
+    float: right;
+    width: 100px;
+    margin-right: 295px;
+}
+#btnRemove, #btnEmpty
+{
+    margin-top: 0;
+    width: 100px;
+}
+#btnRemove
+{
+    margin-bottom: 15px;
+}
+
+/* The style for the cart */
+#lstCart
+{
+    height: 135px;
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+/* The styles for the paragraph that contains
+the buttons below the cart */
+#shopbuttons
+{
+    clear: right;
+    margin-top: 0;
+}
+#btnContinue
+{
+    width: 157px;
+    margin-right: 10px;
+}
+#btnCheckOut
+{
+    width: 100px;
+}
+
+/* The style for the message that's displayed
+when the user clicks the button to check out */
+#message
+{
+    color: Green;
+}

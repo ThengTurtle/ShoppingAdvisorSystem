@@ -1,0 +1,133 @@
+CREATE TABLE customer
+(
+customerID 	int (10)	NOT NULL,
+lastName 	nvarchar (30),
+firstName 	nvarchar (30),
+ic		int (15)	NOT NULL,
+birthDate	date,
+address		nvarchar (30),
+city		nvarchar (20),
+state		nvarchar (20),
+postalCode	int (7),
+phoneNumber	int (13),
+email		nvarchar (30),
+UserID		int (10),
+PRIMARY KEY (customerID)
+);
+
+
+CREATE TABLE employee
+(
+employeeID 	int (10)	NOT NULL,
+lastName 	nvarchar (30),
+firstName 	nvarchar (30),
+ic		int (15)	NOT NULL,
+birthDate	nvarchar (15),
+title		nvarchar (10),
+hireDate	nvarchar (15),
+address		nvarchar (30),
+city		nvarchar (20),
+state		nvarchar (20),
+postalCode	int (7),
+phoneNumber	int (13),
+homeNumber	int (13),
+email		nvarchar (30),
+notes		nvarchar (50),
+UserID		int (10),
+PRIMARY KEY (employeeID)
+);
+
+
+
+CREATE TABLE supplier
+(
+supplierID 	int (10)	NOT NULL,
+companyName	nvarchar (30),
+contactName	nvarchar (30),
+contactTitle	nvarchar (30),
+address		nvarchar (30),
+city		nvarchar (20),
+state		nvarchar (20),
+postalCode	int (7),
+phoneNumber	int (13),
+fax		int (13),
+PRIMARY KEY (supplierID)
+);
+
+
+
+
+CREATE TABLE category
+(
+categoryID 	int (10)	NOT NULL,
+categoryName	nvarchar (30),
+description	nvarchar (50),
+PRIMARY KEY (categoryID)
+);
+
+
+
+
+
+CREATE TABLE sub_category
+(
+subCategoryID 	int (10)	NOT NULL,
+Name		nvarchar (30),
+description	nvarchar (50),
+categoryID	int (10)	NOT NULL,
+PRIMARY KEY (subCategoryID),
+FOREIGN KEY (categoryID) REFERENCES category(categoryID)
+);
+
+
+
+CREATE TABLE product
+(
+productID 		int (10)	NOT NULL,
+categoryID		int (10)	NOT NULL,
+supplierID		int (10)	NOT NULL,
+productName		nvarchar (30),
+productDescription	nvarchar (50),
+Quantity		int (10),
+unitPrice		numeric(10,2),
+unitInStock		smallint(10),
+unitOnOrder		smallint(10),
+reorderLevel		smallint(10),
+PRIMARY KEY (productID),
+FOREIGN KEY (categoryID) REFERENCES category(categoryID),
+FOREIGN KEY (supplierID) REFERENCES supplier(supplierID)
+);
+
+
+
+CREATE TABLE OrderT
+(
+orderID 	int (10)	NOT NULL,
+customerID	int (10)	NOT NULL,
+employeeID	int (10)	NOT NULL,
+orderDate	nvarchar (15),
+PRIMARY KEY (orderID),
+FOREIGN KEY (customerID) REFERENCES customer(customerID),
+FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
+);
+
+
+
+
+CREATE TABLE order_details
+(
+orderID 	int (10)	NOT NULL,
+productID	int (10)	NOT NULL,
+unitPrice	numeric(10,2),
+quantity	smallint (10),
+discount	real,
+PRIMARY KEY (orderID, productID)
+);
+
+CREATE TABLE User
+(
+UserID		int (10)	NOT NULL,
+UserName	NVARCHAR (30)	NOT NULL,
+UserType	NVARCHAR (20)	NULL,
+PRIMARY KEY (UserID)
+);

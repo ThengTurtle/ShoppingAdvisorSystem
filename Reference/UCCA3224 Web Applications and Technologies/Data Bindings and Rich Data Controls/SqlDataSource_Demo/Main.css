@@ -1,0 +1,56 @@
+﻿body {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 85%;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+}
+p 
+{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+#page 
+{
+    width: 700px;
+    margin: 0 auto;
+    background-color: White;
+}
+#header
+{
+    margin-bottom: 0;
+}
+#main
+{
+    padding: 10px;
+    margin-top: 0;
+}
+#ddlCategory
+{
+    width: 130px;
+}
+#ddlProducts
+{
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    
+}
+.col1
+{
+    width: 100px;
+}
+.col2
+{
+    width: 200px;
+}
+.col3
+{
+    width: 80px;
+    text-align: right;
+}
+.col4
+{
+    width: 80px;
+    text-align: right;
+}

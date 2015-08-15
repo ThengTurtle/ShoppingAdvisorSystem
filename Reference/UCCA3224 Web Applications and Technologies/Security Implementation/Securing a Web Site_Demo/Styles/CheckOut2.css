@@ -1,0 +1,45 @@
+﻿.bold
+{
+    font-weight: bold;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.label
+{
+    float: left;
+    width: 110px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.entry
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#payment
+{
+    float: left;
+    width: 450px;
+}
+#CC1
+{
+    float: left;
+    width: 175px;
+}
+#ddlMonth
+{
+    margin-right: 5px;
+}
+#buttons
+{
+    clear: left;
+    padding-top: 15px;
+}
+#btnAccept, #btnCancel
+{
+    margin-right: 10px;
+}
+#ValidationSummary1
+{
+    margin-left: 460px;
+}

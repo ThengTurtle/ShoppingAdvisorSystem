@@ -1,0 +1,40 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Chapter 9: Master Page</title>
+    <link href="Styles/Main.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="page">
+        <div id="header">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner.jpg" />
+        </div>
+        <div id="sidebar">
+            <p class="link">
+                <asp:HyperLink ID="HyperLink1" runat="server" 
+                NavigateUrl="~/Order.aspx" ForeColor="DarkOrange">Home</asp:HyperLink></p>
+            <p class="link">
+                <asp:HyperLink ID="HyperLink2" runat="server"
+                NavigateUrl="~/Cart.aspx" ForeColor="DarkOrange">Your Shopping Cart</asp:HyperLink></p>
+            <p class="link">
+                <asp:HyperLink ID="HyperLink3" runat="server"
+                NavigateUrl="~/Service.aspx" ForeColor="DarkOrange">Customer Service</asp:HyperLink></p>
+            <p class="link">
+                <asp:HyperLink ID="HyperLink4" runat="server"
+                NavigateUrl="~/About.aspx" ForeColor="DarkOrange">About Us</asp:HyperLink></p>
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <p id="message"><asp:Label ID="lblMessage" runat="server"></asp:Label></p>
+    </div>
+    </form>
+</body>
+</html>

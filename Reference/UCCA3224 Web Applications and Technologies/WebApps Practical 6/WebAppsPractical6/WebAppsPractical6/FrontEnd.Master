@@ -1,0 +1,34 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="FrontEnd.master.vb" Inherits="WebAppsPractical6.FrontEnd" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="PageWapper">
+        <header >
+            <a href ="/">Header Goes Here</a>
+        </header>
+        <nav>
+            Menu Goes Here
+        </nav>
+        <section id ="MainContent">
+            <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </section>
+        <aside >
+            Sidebar Goes Here
+        </aside>
+        <footer >
+            Footer Goes here
+        </footer>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿/* The styles for the paragraph that contains
+the fields for selecting a product */
+#products
+{
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+#ddlProducts
+{
+    width: 150px;
+}
+
+/* The style for the product image */
+#imgProduct 
+{
+    float: right;
+    margin-right: 206px;
+    margin-left: 40px;
+}
+
+/* The styles for the paragraphs that contain
+the product information */
+#name 
+{
+    font-size: 125%;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#shortdesc, #longdesc 
+{
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+#unitprice
+{
+    font-size: 125%;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* The styles for the division that contains
+the order fields */
+#order
+{
+    margin-bottom: 15px;
+}
+#quantity
+{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+#txtQuantity
+{
+    width: 40px;
+}
+#RequiredFieldValidator1, #RangeValidator1
+{
+    margin-left: 5px;
+}
+#btnAdd, #btnCart
+{
+    margin-right: 10px;
+}
